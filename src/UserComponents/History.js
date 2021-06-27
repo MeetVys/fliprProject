@@ -1,4 +1,7 @@
 import HistoryMail from "./HistoryMail";
+import Container from 'react-bootstrap/Container';
+import { Row } from "react-bootstrap";
+import './History.css' ;
 const History = () => {
     const data = [{
         id:1,
@@ -10,13 +13,27 @@ const History = () => {
     }] ;
    
     return (
-        <div>
-            {data.map((obj)=>{
-            return <HistoryMail id={obj.id} body={obj.body}></HistoryMail>
-        })}
-        </div>
+        <>
+        <br></br>
+        <br></br>
+            <Container className="homepageouter">
+                {data.map((obj) => {
+                    return (<>  <Row>
+                        
+                        <HistoryMail id={obj.id} body={obj.body}></HistoryMail>
+                        
+                    </Row>
+                    <br></br></>
+                   )
+                })
+                }
+            </Container>
+
+        </>
+        
         
     )
 } ;
 
 export default History ;
+
