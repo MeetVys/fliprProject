@@ -1,10 +1,12 @@
 import './SignUp.css';
+import axios from 'axios' ;
 import { useRef, useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import gicon from '../Photos/gicon.png';
 const SignUp = (props) => {
+    const API = axios.create({baseURL:'http://localhost:5000'});
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
     const name = useRef() ;
@@ -16,7 +18,7 @@ const SignUp = (props) => {
     }
 
     async function addUser(userdata) {
-        const response = await fetch('https://react-http-12e56-default-rtdb.firebaseio.com/movies.json',{
+        const response = await fetch('http://localhost:5000/user/signup',{
           method:'POST',
           body: JSON.stringify(userdata) ,
           headers:{
