@@ -1,0 +1,26 @@
+
+.custom_create{
+    width: 50%;
+}
+.custom_create2{
+    width: 75% ;
+    height: 300px;
+}
+.custom_create3{
+    width: 25% ;
+    
+}
+
+.sch {
+    padding:10px  ;
+    margin-left: 10px;
+    font-weight: 800;
+    border-radius: 30px;
+}
+
+.sendmail{
+    padding:10px;
+    font-size: 20px;
+    border-radius: 26px;
+    background-color: rgb(63, 158, 145);
+}

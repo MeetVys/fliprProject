@@ -1,12 +1,21 @@
 import Auth from "./Authentication/Auth";
 import Home from "./userSpecific/Home";
+import AboutUs from "./InitPage/AboutUs";
+import { useState } from "react";
+import SignUp from "./Authentication/Signup";
+// import './App.css' ;
 function App() {
+  const [statusEntry, setStatusEntry] = useState(9) ;
+  const [userloggedin,setUserloggedin] = useState(1) ;
   return (
-    <div>
-      <h2>Let's get started!</h2>
-      {/* <Auth></Auth> */}
-      <Home></Home>
-    </div>
+    <>
+    {userloggedin===1 && <Home></Home>}
+    {statusEntry===0  &&  <AboutUs statusEntry={statusEntry} setStatusEntry={setStatusEntry}></AboutUs>}
+
+    {statusEntry===1 && <Auth statusEntry={statusEntry} setStatusEntry={setStatusEntry} ></Auth>}
+    {statusEntry===2 && <SignUp statusEntry={statusEntry} setStatusEntry={setStatusEntry} ></SignUp>}
+   
+    </>
   );
 }
 

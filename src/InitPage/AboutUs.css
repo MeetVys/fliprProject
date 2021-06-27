@@ -1,0 +1,91 @@
+body{
+    
+    border-radius: 0px;
+    
+    
+    
+    /* background: url(../Photos/bgfront.png);
+    
+    background-repeat: no-repeat;
+    background-size: 100%;;
+     */
+    
+    /* background-blend-mode: darken;
+    mix-blend-mode: darken; */
+    
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 10%;
+    display: inline-block;
+    
+}
+.title{
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+#seconddiv {
+    margin-top: 10%;
+    margin-left: 27%;
+    font-size: 3rem;
+}
+
+.login {
+    margin-left: 10%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    border-radius: 10px;
+    padding-top: .5%;
+    padding-bottom: .5%;
+   
+}
+
+.sig {
+    background-color: rgb(255, 255, 255);
+    font-size: 25px;
+    border-radius: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+  /* bootstrap nav
+   */
+
+.customNav{
+    width: 20%;
+    margin-left: auto;
+    /* background-color: black; */
+    color: rgb(255, 255, 255);
+    position: fixed;
+    right:0;
+    top:0 ;
+
+}
+.customNav2{
+   height:100%;
+   /* background-color: black; */
+   color: rgb(255, 255, 255);
+    
+}
+
+.customNav3{
+    /* height:;
+     */height: 100vh;
+    /* background-color: black; */
+    color: rgb(255, 255, 255);
+     
+ }
+
+ .coler{
+     color: rgb(255, 255, 255);
+ }

@@ -2,11 +2,12 @@ import { useState } from "react";
 import Homepage from "../UserComponents/Homepage";
 import History from "../UserComponents/History";
 import Create from "../UserComponents/Create";
-
+import './Home.css' ;
 const Home = () => {
     const [category, setCategory] = useState(1) ;
 
     const HomePageButton = () =>{
+
         setCategory(1) ;
     }
     const HistpryPageButton = () =>{
