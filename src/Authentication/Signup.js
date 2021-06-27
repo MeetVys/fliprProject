@@ -15,7 +15,29 @@ const SignUp = (props) => {
         props.setStatusEntry(1) ;
     }
 
-
+    async function addUser(userdata) {
+        const response = await fetch('https://react-http-12e56-default-rtdb.firebaseio.com/movies.json',{
+          method:'POST',
+          body: JSON.stringify(userdata) ,
+          headers:{
+            'Content-Type':'application/json'
+          }  
+        })
+        const data = await response.json() ;
+        console.log(data) ;
+        //console.log(movie);
+    }
+    const SignUpHandler = (Event) =>{
+        Event.preventDefault() ;
+        console.log(emailInputRef.current.value) ;
+        console.log(passwordInputRef.current.value) ;
+        console.log(name.current.value) ;
+        const objUser = {   email: emailInputRef.current.value,
+                        password:passwordInputRef.current.value,
+                        name:name.current.value
+                    }
+        addUser(objUser) ;
+    }
     return (<div>
      
 
@@ -54,7 +76,7 @@ const SignUp = (props) => {
                        
                         <br></br>
                         <div>
-                            <button  className="login" >Sign Up</button>
+                            <button  className="login" onClick={SignUpHandler}>Sign Up</button>
                           
                            
                         </div>

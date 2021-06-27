@@ -5,8 +5,9 @@ import { useState } from "react";
 import SignUp from "./Authentication/Signup";
 // import './App.css' ;
 function App() {
-  const [statusEntry, setStatusEntry] = useState(9) ;
-  const [userloggedin,setUserloggedin] = useState(1) ;
+  const [statusEntry, setStatusEntry] = useState(0) ;
+  const [userloggedin,setUserloggedin] = useState(0) ;
+  
   return (
     <>
     {userloggedin===1 && <Home></Home>}

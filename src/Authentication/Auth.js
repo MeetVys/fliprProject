@@ -13,10 +13,17 @@ const Auth = (props) => {
     const [isLogin, setIsLogin] = useState(true);
 
   
-    const signuphandler = ()=>{
+    const signuphandler = (Event)=>{
+        Event.preventDefault() ;
         props.setStatusEntry(2) ;
     }
 
+    const loginHandler = (Event) =>{
+        Event.preventDefault() ;
+
+        console.log(emailInputRef.current.value) ;
+        console.log(passwordInputRef.current.value) ;
+    }
 
     return (<div>
      
@@ -51,7 +58,7 @@ const Auth = (props) => {
                        
                         <br></br>
                         <div>
-                            <button  className="login" >Login</button>
+                            <button  className="login" onClick={loginHandler}>Login</button>
                           
                            
                         </div>
